@@ -1,15 +1,15 @@
 spring.application.name=AuthService
 
 # Server Configuration
-server.port=${PORT:8080}
+server.port=8080
 
 # Supabase PostgreSQL Configuration
-export spring.datasource.url=${SPRING_DATASOURCE_URL}
-export spring.datasource.username=${SPRING_DATASOURCE_USERNAME}
-export spring.datasource.password=${SPRING_DATASOURCE_PASSWORD}
-export spring.datasource.driver-class-name=org.postgresql.Driver
+spring.datasource.url=jdbc:postgresql://db.tmfaeojoqbqdtrtqmbqq.supabase.co:5432/postgres?user=postgres&password=auth#123SERV
+spring.datasource.username=postgres
+spring.datasource.password=auth#123SERV
+spring.datasource.driver-class-name=org.postgresql.Driver
 
-# Connection Pool
+# Connection Pool (Important for Production)
 spring.datasource.hikari.maximum-pool-size=10
 spring.datasource.hikari.minimum-idle=5
 spring.datasource.hikari.connection-timeout=30000
@@ -20,9 +20,9 @@ spring.jpa.show-sql=false
 spring.jpa.properties.hibernate.format_sql=true
 spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
 
-# JWT Configuration
-export jwt.secret=${JWT_SECRET}
-export jwt.expiration=86400000
+# JWT Configuration (CHANGE THIS SECRET IN PRODUCTION!)
+jwt.secret=${JWT_SECRET:MySecretKeyForJWTTokenGenerationMustBeLongEnough123456789}
+jwt.expiration=86400000
 
 # Production Settings
 spring.jpa.open-in-view=false

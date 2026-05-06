@@ -21,7 +21,7 @@ spring.jpa.properties.hibernate.format_sql=true
 spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
 
 # JWT Configuration
-export jwt.secret=${JWT_SECRET}
+export jwt.secret=jwt.secret=mySuper$ecretKey2026AuthServiceLocalDev!
 export jwt.expiration=86400000
 
 # Production Settings

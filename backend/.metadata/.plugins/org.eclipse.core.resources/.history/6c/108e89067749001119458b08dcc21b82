@@ -4,10 +4,10 @@ spring.application.name=AuthService
 server.port=${PORT:8080}
 
 # Supabase PostgreSQL Configuration
-export spring.datasource.url=${SPRING_DATASOURCE_URL}
-export spring.datasource.username=${SPRING_DATASOURCE_USERNAME}
-export spring.datasource.password=${SPRING_DATASOURCE_PASSWORD}
-export spring.datasource.driver-class-name=org.postgresql.Driver
+spring.datasource.url=${SPRING_DATASOURCE_URL}
+spring.datasource.username=${SPRING_DATASOURCE_USERNAME}
+spring.datasource.password=${SPRING_DATASOURCE_PASSWORD}
+spring.datasource.driver-class-name=org.postgresql.Driver
 
 # Connection Pool
 spring.datasource.hikari.maximum-pool-size=10
@@ -21,8 +21,8 @@ spring.jpa.properties.hibernate.format_sql=true
 spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
 
 # JWT Configuration
-export jwt.secret=${JWT_SECRET}
-export jwt.expiration=86400000
+jwt.secret=jwt.secret=mySuper$ecretKey2026AuthServiceLocalDev!
+jwt.expiration=86400000
 
 # Production Settings
 spring.jpa.open-in-view=false

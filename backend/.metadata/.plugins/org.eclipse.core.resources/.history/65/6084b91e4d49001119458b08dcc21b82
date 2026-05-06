@@ -1,0 +1,5 @@
+package com.authenticaiton.AuthService.service;
+
+public class AuthService {
+
+}

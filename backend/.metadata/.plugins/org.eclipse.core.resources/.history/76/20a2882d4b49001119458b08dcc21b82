@@ -1,0 +1,5 @@
+package com.authenticaiton.AuthService.entity;
+
+public class User {
+
+}

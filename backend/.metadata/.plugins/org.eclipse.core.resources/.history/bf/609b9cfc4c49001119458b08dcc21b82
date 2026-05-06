@@ -1,0 +1,5 @@
+package com.authenticaiton.AuthService.config;
+
+public class SecurityConfig {
+
+}

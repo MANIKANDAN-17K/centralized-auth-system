@@ -1,0 +1,5 @@
+package com.authenticaiton.AuthService.security;
+
+public class CustomUserDetailsService {
+
+}

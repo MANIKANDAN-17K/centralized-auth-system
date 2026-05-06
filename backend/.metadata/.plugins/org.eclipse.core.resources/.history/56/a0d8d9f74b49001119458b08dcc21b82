@@ -1,0 +1,5 @@
+package com.authenticaiton.AuthService.dto;
+
+public class SignupRequest {
+
+}

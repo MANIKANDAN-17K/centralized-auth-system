@@ -1,0 +1,5 @@
+package com.authenticaiton.AuthService.controller;
+
+public class AuthController {
+
+}

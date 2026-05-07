@@ -1,11 +1,15 @@
-FROM eclipse-temurin:17-jdk
+FROM openjdk:17-jdk-slim
 
 WORKDIR /app
 
-COPY backend /app
-
+# Install Maven
 RUN apt-get update && apt-get install -y maven
 
+# Copy pom.xml and source FIRST
+COPY pom.xml .
+COPY src ./src
+
+# Now build
 RUN mvn clean package -DskipTests
 
 EXPOSE 8080

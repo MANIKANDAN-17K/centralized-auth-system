@@ -1,16 +1,14 @@
-FROM openjdk:17-jdk-slim
+FROM eclipse-temurin:17-jdk-jammy
 
 WORKDIR /app
 
-# Install Maven
-RUN apt-get update && apt-get install -y maven
-
-# Copy pom.xml and source FIRST
+# Copy pom.xml and source
 COPY pom.xml .
 COPY src ./src
 
-# Now build
-RUN mvn clean package -DskipTests
+# Build the jar
+RUN apt-get update && apt-get install -y maven && \
+    mvn clean package -DskipTests
 
 EXPOSE 8080
 

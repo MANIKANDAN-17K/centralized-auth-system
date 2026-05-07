@@ -2,11 +2,9 @@ FROM eclipse-temurin:17-jdk-jammy
 
 WORKDIR /app
 
-# Copy pom.xml and source
-COPY pom.xml .
-COPY src ./src
+COPY backend/AuthService/pom.xml .
+COPY backend/AuthService/src ./src
 
-# Build the jar
 RUN apt-get update && apt-get install -y maven && \
     mvn clean package -DskipTests
 
